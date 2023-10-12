@@ -43,7 +43,7 @@ Architecture RTL of GaussianP is
 	
 	component inv is
 		generic
-				(g_lines:integer:=8);
+				(g_lines:integer:=g_lines);
 		port
 				(i_inv:in std_logic
 				;i_Data:in std_logic_vector(g_lines-1 downto 0)

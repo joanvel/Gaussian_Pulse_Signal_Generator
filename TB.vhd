@@ -39,7 +39,7 @@ Architecture RTL of TB is
 	file f_Data:text;
 begin
 	--Señal de frecuencia de control
-	s_DataIn<="00000001";
+	s_DataIn<="10000000";
 	--Señal de reinicio
 	process
 	begin
@@ -83,8 +83,8 @@ begin
 		variable l:line;
 		variable status:file_open_status;
 	begin
-		if (rising_edge(s_Clk) and s_finish='0') then
-			file_open(status,f_Data,"C:\Users\Joan\Documents\TG\Senales\Gaussian_Pulse\GP1.txt",append_mode);
+		if rising_edge(s_Clk) and s_finish = '0' then
+			file_open(status,f_Data,"C:\Users\Joan\Documents\TG\Senales\Gaussian_Pulse\GP8.txt",append_mode);
 			assert status=open_ok
 				report "No se pudo crear GP.txt"
 				severity failure;
